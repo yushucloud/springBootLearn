@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.example</groupId>
+    <artifactId>spring-boot-demo</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>spring-boot-sharding-jdbc</module>
+        <module>spring-boot-sharding-jdbc/spring-boot-sharding-jdbc-5.0.0</module>
+        <module>spring-boot-sharding-jdbc/spring-boot-sharding-jdbc-4.1.1</module>
+        <module>spring-boot-sharding-jdbc/spring-boot-sharding-jdbc-4.1.1/sharding-jdbc-4.1.1-simple-db-table</module>
+        <module>spring-boot-sharding-jdbc/spring-boot-sharding-jdbc-4.1.1/sharding-jdbc-4.1.1-db-table</module>
+        <module>spring-boot-mybatis-plus</module>
+        <module>spring-boot-mybatis-plus/spring-boot-mybatis-plus-simple</module>
+        <module>spring-boot-mybatis-plus/spring-boot-mybatis-plus-generate</module>
+        <module>spring-boot-mybatis-plus/spring-boot-mybatis-plus-demo</module>
+        <module>spring-boot-mybatis-plus/spring-boot-mybatis-plus-dynamic-datasource-demo</module>
+        <module>spring-boot-elasticsearch</module>
+        <module>spring-boot-elasticsearch/spring-boot-elasticsearch-7</module>
+        <module>spring-boot-elasticsearch/spring-boot-elasticsearch-6</module>
+        <module>spring-boot-swagger</module>
+        <module>spring-boot-mq-rabbitmq</module>
+        <module>spring-boot-mq-rabbitmq/spring-boot-rabbitmq-simple</module>
+        <module>spring-boot-mq-rabbitmq/spring-boot-rabbitmq</module>
+        <module>spring-boot-mq-rabbitmq/spring-boot-rabbitmq-simple/producer-simple</module>
+        <module>spring-boot-mq-rabbitmq/spring-boot-rabbitmq/producer</module>
+        <module>spring-boot-mq-rabbitmq/spring-boot-rabbitmq-simple/consumer-simple</module>
+        <module>spring-boot-mq-rabbitmq/spring-boot-rabbitmq/consumer</module>
+        <module>spring-boot-mq-rocketmq</module>
+        <module>spring-boot-mq-rocketmq/spring-boot-rocketmq-simple</module>
+        <module>spring-boot-mq-rocketmq/spring-boot-rocketmq</module>
+        <module>spring-boot-mq-rocketmq/spring-boot-rocketmq-simple/rocketmq-producer-simple</module>
+        <module>spring-boot-mq-rocketmq/spring-boot-rocketmq-simple/rocketmq-consumer-simple</module>
+        <module>spring-boot-mq-rocketmq/spring-boot-rocketmq/rocketmq-consumer</module>
+        <module>spring-boot-mq-rocketmq/spring-boot-rocketmq/rocketmq-producer</module>
+        <module>spring-boot-logback</module>
+        <module>spring-boot-validator</module>
+        <module>spring-boot-cache-redis</module>
+        <module>spring-boot-cache-caffeine</module>
+        <module>spring-boot-cache</module>
+        <module>spring-boot-multi-threading</module>
+        <module>spring-boot-canal</module>
+        <module>spring-boot-session-data-redis</module>
+        <module>spring-boot-excel</module>
+        <module>spring-boot-mybatis-plus/spring-boot-mybatis-plus-p6spy-demo</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
+</project>
