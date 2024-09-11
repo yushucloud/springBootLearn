@@ -8,7 +8,7 @@
     <artifactId>spring-boot-demo</artifactId>
     <version>1.0</version>
     <packaging>war</packaging>
-    <name>spring-boot-demo</name>
+    <name>spring-boot-demo1</name>
     <description>Spring Boot教程(一)：体验Spring Boot源码</description>
 
     <!-- Spring Boot启动器父类 -->

@@ -21,6 +21,8 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>spring boot-websocket</module>
+        <module>spring boot-websocket-study-master</module>
         <module>spring-boot-demo</module>
         <module>spring-boot-properties</module>
         <module>spring-boot-env</module>
