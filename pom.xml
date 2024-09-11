@@ -21,6 +21,16 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>springboot-01-cache</module>
+        <module>springboot-02-amqp</module>
+        <module>springboot-03-elastic</module>
+        <module>springboot-03-elastic</module>
+        <module>springboot-04-task</module>
+        <module>springboot-05-security</module>
+        <module>springboot-07-deploy</module>
+        <module>springboot-08-actuator</module>
+        <module>springboot-thymeleaf-layout-demo</module>
+        <module>springbootdemo</module>
         <module>spring boot-websocket</module>
         <module>spring boot-websocket-study-master</module>
         <module>spring-boot-demo</module>
