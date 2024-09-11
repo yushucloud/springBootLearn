@@ -1,0 +1,17 @@
+com\xkcoding\oauth\entity\SysUser.class
+com\xkcoding\oauth\service\SysClientDetailsService.class
+com\xkcoding\oauth\config\Oauth2AuthorizationServerConfig.class
+com\xkcoding\oauth\service\impl\SysUserServiceImpl.class
+com\xkcoding\oauth\service\SysUserService.class
+com\xkcoding\oauth\config\WebSecurityConfig.class
+com\xkcoding\oauth\repostiory\SysClientDetailsRepository.class
+com\xkcoding\oauth\controller\AuthorizationController.class
+com\xkcoding\oauth\config\ClientLoginFailureHandler.class
+com\xkcoding\oauth\entity\SysRole.class
+com\xkcoding\oauth\repostiory\SysUserRepository.class
+com\xkcoding\oauth\config\Oauth2AuthorizationTokenConfig.class
+com\xkcoding\oauth\service\impl\SysClientDetailsServiceImpl.class
+com\xkcoding\oauth\entity\SysClientDetails.class
+com\xkcoding\oauth\config\ClientLogoutSuccessHandler.class
+com\xkcoding\oauth\SpringBootDemoOauthApplication.class
+com\xkcoding\oauth\controller\Oauth2Controller.class
