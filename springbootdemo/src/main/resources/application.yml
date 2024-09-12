@@ -1,5 +1,0 @@
-swagger:
-  basePackage: com.qiuyuchun.springbootdemo
-  title: 用户服务
-  description: 用户基本增删改查
-  version: V1.0
