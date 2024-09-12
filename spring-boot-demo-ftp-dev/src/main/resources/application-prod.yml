@@ -1,0 +1,33 @@
+server:
+  port:
+  servlet:
+    context-path: /ftp
+
+# FTP参数配置因为需求的特殊性可以拆分为多个服务器独立配置项，这里我偷个懒直接写在一起了
+ftp:
+  copy:
+    # 提供方ftp服务器地址
+    providerFtpAddress: 120.48.15.186
+    # 提供方ftp服务器端口
+    providerFtpPort: 21
+    # 提供方连接ftp服务器的账号
+    providerFtpUserName: hjp
+    # 提供方连接ftp服务器的密码
+    providerFtpPassword: 123
+    # 提供方FTP服务器基础目录 （不写指向的是ftp服务器的根目录）
+    providerFtpBasePath: hjpPersonal
+    # 提供方ftp图片库访问地址(这个参数没什么用，测试用的)
+    providerImageBaseUrl: http://192.168.2.110/hjpPersonal/
+
+    # 写入方ftp服务器地址
+    consumerFtpAddress: 49.4.3.102
+    # 写入方ftp服务器端口
+    consumerFtpPort: 21
+    # 写入方连接ftp服务器的账号
+    consumerFtpUserName: ghh
+    # 写入方连接ftp服务器的密码
+    consumerFtpPassword: 123
+    # 写入方FTP服务器基础目录 （不写指向的是ftp服务器的根目录）
+    consumerFtpBasePath: ghhTestHjp
+    # 写入方ftp图片库访问地址（这个参数没什么用，测试用的）
+    consumerImageBaseUrl: http://192.168.2.110/hjpPersonal/

@@ -1,0 +1,15 @@
+config:
+  app:
+    name: CMS-FTP
+
+spring:
+  profiles:
+    active: test
+  application:
+    name: ${config.app.name}
+  servlet:
+    multipart:
+      #      单个文件的大小不能超过该值
+      max-file-size: 100MB
+      #      单个请求最大的大小不能超过该值
+      max-request-size: 1000MB
