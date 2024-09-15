@@ -5,7 +5,7 @@
 
     <parent>
         <artifactId>spring-boot-demo-rocketmq</artifactId>
-        <groupId>com.xkcoding</groupId>
+        <groupId>com.yushu</groupId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 

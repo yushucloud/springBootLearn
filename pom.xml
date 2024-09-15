@@ -11,29 +11,47 @@
         <relativePath/>
     </parent>
 
-    <groupId>com.xkcoding</groupId>
+
+    <groupId>com.yushu</groupId>
     <artifactId>springBootLearn</artifactId>
+
     <version>1.0.0-SNAPSHOT</version>
 
     <name>springBootLearn</name>
-    <url>http://xkcoding.com</url>
     <packaging>pom</packaging>
+
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <spring.boot.version>2.7.3</spring.boot.version>
+        <mysql.version>8.0.12</mysql.version>
+        <hutool.version>5.0.0</hutool.version>
+        <guava.version>28.1-jre</guava.version>
+        <user.agent.version>1.20</user.agent.version>
+        <spring.boot.version>2.7.3</spring.boot.version>
+    </properties>
 
     <modules>
         <!--<module>spring-boot-demo-actuator</module>
         <module>spring-boot-demo-admin</module>
         <module>spring-boot-demo-amqp</module>
         <module>spring-boot-demo-amqp2</module>-->
-        <module>spring-boot-demo-async</module>
+
         <!--        <module>spring-boot-demo-dubbo</module>-->
-        <module>spring-boot-demo-multi-threading</module>
-        <module>spring-boot-demo-task</module>
+        <module>spring-boot-demo-async</module>
+        <!--        <module>spring-boot-demo-config</module>-->
+
+        <!--        <module>spring-boot-demo-multi-threading</module>-->
+        <!--        <module>spring-boot-demo-task</module>-->
         <!--        <module>spring-boot-demo-task-quartz</module>-->
         <!--        <module>spring-boot-demo-task-xxl-job</module>-->
         <!--<module>spring-boot-demo-cache</module>
         <module>spring-boot-demo-canal</module>
         <module>spring-boot-demo-codegen</module>
-        <module>spring-boot-demo-config</module>
         <module>spring-boot-demo-data-jdbc</module>
         <module>spring-boot-demo-data-jpa</module>
         <module>spring-boot-demo-data-mybatis</module>
@@ -126,32 +144,19 @@
     </modules>
 
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <spring.boot.version>2.7.3</spring.boot.version>
-        <mysql.version>8.0.12</mysql.version>
-        <hutool.version>5.0.0</hutool.version>
-        <guava.version>28.1-jre</guava.version>
-        <user.agent.version>1.20</user.agent.version>
-    </properties>
-
-    <!--  <repositories>
-          <repository>
-              <id>aliyun</id>
-              <name>aliyun</name>
-              <url>https://maven.aliyun.com/repository/public</url>
-              <releases>
-                  <enabled>true</enabled>
-              </releases>
-              <snapshots>
-                  <enabled>false</enabled>
-              </snapshots>
-          </repository>
-      </repositories>-->
+    <repositories>
+        <repository>
+            <id>aliyun</id>
+            <name>aliyun</name>
+            <url>https://maven.aliyun.com/repository/public</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 
     <dependencyManagement>
         <dependencies>
@@ -162,6 +167,42 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
+
+            <!-- Spring Boot 核心依赖 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
+
+            <!-- Redis 依赖 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-redis</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
+
+            <!-- MySQL 依赖 -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+
+            <!-- 公共模块依赖 -->
+            <!-- <dependency>
+                 <groupId>com.example</groupId>
+                 <artifactId>user-service</artifactId>
+             </dependency>
+             <dependency>
+                 <groupId>com.example</groupId>
+                 <artifactId>organization-service</artifactId>
+             </dependency>-->
 
             <!-- hutool工具类 -->
             <dependency>
@@ -189,34 +230,22 @@
             </dependency>
 
 
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-test</artifactId>
-                <scope>test</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter</artifactId>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-web</artifactId>
-            </dependency>
 
 
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-test</artifactId>
+                <version>${spring.boot.version}</version>
+
                 <scope>test</scope>
             </dependency>
 
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
-                <optional>true</optional>
+                <version>1.18.28</version> <!-- 使用最新版本 -->
+                <scope>provided</scope>
             </dependency>
-
 
         </dependencies>
     </dependencyManagement>

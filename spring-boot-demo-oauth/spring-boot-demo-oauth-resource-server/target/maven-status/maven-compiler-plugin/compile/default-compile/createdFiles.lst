@@ -1,4 +1,0 @@
-com\xkcoding\oauth\SpringBootDemoResourceApplication.class
-com\xkcoding\oauth\config\OauthResourceServerConfig.class
-com\xkcoding\oauth\config\OauthResourceTokenConfig.class
-com\xkcoding\oauth\controller\TestController.class
