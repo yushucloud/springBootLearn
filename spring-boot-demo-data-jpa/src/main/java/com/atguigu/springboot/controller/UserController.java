@@ -15,7 +15,8 @@ public class UserController {
 
     @GetMapping("/user/{id}")
     public User getUser(@PathVariable("id") Integer id){
-        User user = userRepository.findOne(id);
+//        User user = userRepository.findOne(id);
+        User user = null;
         return user;
     }
 

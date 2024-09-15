@@ -8,14 +8,14 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>spring-boot-08-starter-test</name>
-	<description>Demo project for Spring Boot</description>
+	<name>spring-boot-demo-starter-test</name>
+	<description>spring-boot-demo-starter-test</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.10.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		 <version>2.7.3</version>
+		<relativePath/>
 	</parent>
 
 	<properties>

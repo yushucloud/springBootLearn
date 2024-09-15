@@ -9,3 +9,13 @@ server:
 #      pool:
 #        size: 20
 #      thread-name-prefix: Job-Thread-
+spring:
+  mail:
+    username: 534096094@qq.com
+    password: gtstkoszjelabijb
+    host: smtp.qq.com
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: true

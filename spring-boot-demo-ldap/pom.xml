@@ -12,7 +12,8 @@
   <description>Demo project for Spring Boot</description>
 
   <parent>
-    <artifactId>spring-boot-demo</artifactId>
+    <artifactId>springBootLearn</artifactId>
+
     <groupId>com.xkcoding</groupId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>

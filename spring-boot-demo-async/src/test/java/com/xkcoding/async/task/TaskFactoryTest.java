@@ -1,6 +1,7 @@
 package com.xkcoding.async.task;
 
 import com.xkcoding.async.SpringBootDemoAsyncApplicationTests;
+import com.yushu.async.task.TaskFactory;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;

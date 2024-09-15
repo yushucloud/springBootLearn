@@ -9,6 +9,8 @@
         <module>spring-boot-demo-dubbo-common</module>
         <module>spring-boot-demo-dubbo-provider</module>
         <module>spring-boot-demo-dubbo-consumer</module>
+        <module>consumer-user</module>
+        <module>provider-ticket</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -17,7 +19,7 @@
 
     <parent>
         <groupId>com.xkcoding</groupId>
-        <artifactId>spring-boot-demo</artifactId>
+        <artifactId>springBootLearn</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 

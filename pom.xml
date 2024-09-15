@@ -4,158 +4,125 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-   <!-- <groupId>com.songguoliang</groupId>
-    <artifactId>spring-boot-study</artifactId>
-    <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
-
-    <name>spring-boot-demo</name>
-    <url>http://xkcoding.com</url>-->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.3</version>
+        <relativePath/>
+    </parent>
 
     <groupId>com.xkcoding</groupId>
-    <artifactId>spring-boot-demo</artifactId>
+    <artifactId>springBootLearn</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
-    <name>spring-boot-demo</name>
+    <name>springBootLearn</name>
     <url>http://xkcoding.com</url>
     <packaging>pom</packaging>
 
     <modules>
-        <module>spring-boot-demo-actuator</module>
-        <module>spring-boot-demo-actuator2</module>
-        <module>spring-boot-demo-actuator3</module>
+        <!--<module>spring-boot-demo-actuator</module>
         <module>spring-boot-demo-admin</module>
         <module>spring-boot-demo-amqp</module>
-        <module>spring-boot-demo-amqp2</module>
+        <module>spring-boot-demo-amqp2</module>-->
         <module>spring-boot-demo-async</module>
-        <module>spring-boot-demo-cache</module>
-        <module>spring-boot-demo-cache2</module>
-<!--        <module>spring-boot-demo-cache3</module>-->
-        <module>spring-boot-demo-cache-4</module>
-        <module>spring-boot-demo-cache-caffeine</module>
-        <module>spring-boot-demo-cache-ehcache</module>
-        <module>spring-boot-demo-cache-redis</module>
-        <module>spring-boot-demo-cache-redis-2</module>
+        <!--        <module>spring-boot-demo-dubbo</module>-->
+        <module>spring-boot-demo-multi-threading</module>
+        <module>spring-boot-demo-task</module>
+        <!--        <module>spring-boot-demo-task-quartz</module>-->
+        <!--        <module>spring-boot-demo-task-xxl-job</module>-->
+        <!--<module>spring-boot-demo-cache</module>
         <module>spring-boot-demo-canal</module>
         <module>spring-boot-demo-codegen</module>
         <module>spring-boot-demo-config</module>
-        <module>spring-boot-demo-config-02</module>
-        <module>spring-boot-demo-config-autoconfig</module>
         <module>spring-boot-demo-data-jdbc</module>
         <module>spring-boot-demo-data-jpa</module>
         <module>spring-boot-demo-data-mybatis</module>
-        <module>spring-boot-demo-demo</module>
-        <module>spring-boot-demo-demo2</module>
         <module>spring-boot-demo-deploy</module>
-        <module>spring-boot-demo-deploy2</module>
         <module>spring-boot-demo-devtools</module>
         <module>spring-boot-demo-docker</module>
         <module>spring-boot-demo-druid</module>
-        <module>spring-boot-demo-dubbo</module>
-<!--        <module>spring-boot-demo-dubbo2</module>-->
-<!--        <module>spring-boot-demo-dubbo3</module>-->
-        <module>spring-boot-demo-dynamic-datasource</module>
-        <module>spring-boot-demo-ehcache</module>
-        <module>spring-boot-demo-elastic</module>
-        <module>spring-boot-demo-elastic2</module>
-        <module>spring-boot-demo-elasticsearch</module>
-        <module>spring-boot-demo-elasticsearch2</module>
-        <module>spring-boot-demo-elasticsearch-rest-high-level-client</module>
-        <module>spring-boot-demo-email</module>
-        <module>spring-boot-demo-env2</module>
-        <module>spring-boot-demo-excel</module>
-        <module>spring-boot-demo-exception-handler</module>
-        <module>spring-boot-demo-fastjson</module>
-        <module>spring-boot-demo-ftp-dev</module>
-        <module>spring-boot-demo-graylog</module>
-        <module>spring-boot-demo-helloworld</module>
-        <module>spring-boot-demo-helloworld2</module>
-        <module>spring-boot-demo-helloworld-quick</module>
-        <module>spring-boot-demo-https</module>
-        <module>spring-boot-demo-jsp</module>
-        <module>spring-boot-demo-jwt</module>
-        <module>spring-boot-demo-ldap</module>
-        <module>spring-boot-demo-log-aop</module>
-        <module>spring-boot-demo-logback</module>
-        <module>spring-boot-demo-logback2</module>
-        <module>spring-boot-demo-logging</module>
-        <module>spring-boot-demo-mapper4</module>
-        <module>spring-boot-demo-master</module>
-        <module>spring-boot-demo-mongodb</module>
-        <module>spring-boot-demo-mq-kafka</module>
-        <module>spring-boot-demo-mq-rabbitmq</module>
-        <module>spring-boot-demo-mq-rocketmq</module>
-        <module>spring-boot-demo-multi-datasource-jpa</module>
-        <module>spring-boot-demo-multi-datasource-mybatis</module>
-        <module>spring-boot-demo-multi-threading</module>
-        <module>spring-boot-demo-mybatis</module>
-        <module>spring-boot-demo-mybatis-generator</module>
-        <module>spring-boot-demo-mybatis-generator-mysql</module>
-        <module>spring-boot-demo-mybatis-plus</module>
-        <module>spring-boot-demo-neo4j</module>
-        <module>spring-boot-demo-oauth</module>
-        <module>spring-boot-demo-orm-beetlsql</module>
-        <module>spring-boot-demo-orm-jdbctemplate</module>
-        <module>spring-boot-demo-orm-jpa</module>
-        <module>spring-boot-demo-orm-mybatis</module>
-        <module>spring-boot-demo-orm-mybatis-mapper-page</module>
-        <module>spring-boot-demo-orm-mybatis-plus</module>
-        <module>spring-boot-demo-pagehelper</module>
-        <module>spring-boot-demo-properties</module>
-        <module>spring-boot-demo-properties2</module>
-        <module>spring-boot-demo-quartz</module>
-        <module>spring-boot-demo-quartz-db</module>
-        <module>spring-boot-demo-rabbitmq2</module>
-        <module>spring-boot-demo-ratelimit-guava</module>
-        <module>spring-boot-demo-ratelimit-redis</module>
-        <module>spring-boot-demo-rbac-security</module>
-        <module>spring-boot-demo-rbac-shiro</module>
-        <module>spring-boot-demo-rocketmq2</module>
-        <module>spring-boot-demo-scheduling</module>
-        <module>spring-boot-demo-security</module>
-        <module>spring-boot-demo-security2</module>
-        <module>spring-boot-demo-session</module>
-        <module>spring-boot-demo-session-data-redis</module>
-        <module>spring-boot-demo-sharding-jdbc</module>
-        <module>spring-boot-demo-sharding-jdbc2</module>
-        <module>spring-boot-demo-shiro2</module>
-        <module>spring-boot-demo-shiro-ehcache</module>
-        <module>spring-boot-demo-shiro-ehcache-shiro</module>
-        <module>spring-boot-demo-social</module>
-<!--        <module>spring-boot-demo-springcloud</module>-->
-<!--        <module>spring-boot-demo-springcloud2</module>-->
-        <module>spring-boot-demo-springsecurity-jwt-demo</module>
-<!--        <module>spring-boot-demo-starter</module>-->
-        <module>spring-boot-demo-starter-test</module>
-        <module>spring-boot-demo-swagger</module>
-        <module>spring-boot-demo-swagger2</module>
-        <module>spring-boot-demo-swagger-beauty</module>
-        <module>spring-boot-demo-task</module>
-        <module>spring-boot-demo-task2</module>
-        <module>spring-boot-demo-task3</module>
-        <module>spring-boot-demo-task-quartz</module>
-        <module>spring-boot-demo-task-xxl-job</module>
-        <module>spring-boot-demo-template-beetl</module>
-        <module>spring-boot-demo-template-enjoy</module>
-        <module>spring-boot-demo-template-freemarker</module>
-        <module>spring-boot-demo-template-thymeleaf</module>
-        <module>spring-boot-demo-thymeleaf-layout-demo</module>
-        <module>spring-boot-demo-tio</module>
-        <module>spring-boot-demo-uflo</module>
-        <module>spring-boot-demo-upload</module>
-        <module>spring-boot-demo-upload2</module>
-        <module>spring-boot-demo-ureport2</module>
-        <module>spring-boot-demo-urule</module>
-        <module>spring-boot-demo-validator</module>
-        <module>spring-boot-demo-war</module>
-        <module>spring-boot-demo-web-jsp</module>
-        <module>spring-boot-demo-web-restfulcrud</module>
-        <module>spring-boot-demo-websocket</module>
-        <module>spring-boot-demo-websocket2</module>
-        <module>spring-boot-demo-websocket-socketio</module>
-        <module>spring-boot-demo-websocket-study-master</module>
-        <module>spring-boot-demo-wechat-login</module>
-        <module>spring-boot-demo-zookeeper</module>
+        <module>spring-boot-demo-dynamic-datasource</module>-->
+        <!--   <module>spring-boot-demo-ehcache</module>
+       <module>spring-boot-demo-elastic</module>
+       <module>spring-boot-demo-elasticsearch</module>
+       <module>spring-boot-demo-elasticsearch2</module>
+       <module>spring-boot-demo-elasticsearch-rest-high-level-client</module>
+       <module>spring-boot-demo-email</module>
+       <module>spring-boot-demo-env2</module>
+       <module>spring-boot-demo-excel</module>
+       <module>spring-boot-demo-exception-handler</module>
+       <module>spring-boot-demo-fastjson</module>
+       <module>spring-boot-demo-ftp-dev</module>
+       <module>spring-boot-demo-graylog</module>
+       <module>spring-boot-demo-https</module>
+       <module>spring-boot-demo-jsp</module>
+       <module>spring-boot-demo-jwt</module>
+       <module>spring-boot-demo-ldap</module>
+       <module>spring-boot-demo-log-aop</module>
+       <module>spring-boot-demo-logback</module>
+       <module>spring-boot-demo-logging</module>
+       <module>spring-boot-demo-mapper4</module>
+       <module>spring-boot-demo-mongodb</module>
+       <module>spring-boot-demo-mq-kafka</module>
+       <module>spring-boot-demo-mq-rabbitmq</module>
+       <module>spring-boot-demo-mq-rocketmq</module>
+       <module>spring-boot-demo-multi-datasource-jpa</module>
+       <module>spring-boot-demo-multi-datasource-mybatis</module>
+
+       <module>spring-boot-demo-mybatis</module>
+       <module>spring-boot-demo-mybatis-generator</module>
+       <module>spring-boot-demo-mybatis-generator-mysql</module>
+       <module>spring-boot-demo-mybatis-plus</module>
+       <module>spring-boot-demo-neo4j</module>
+       <module>spring-boot-demo-oauth</module>
+       <module>spring-boot-demo-orm-beetlsql</module>
+       <module>spring-boot-demo-orm-jdbctemplate</module>
+       <module>spring-boot-demo-orm-jpa</module>
+       <module>spring-boot-demo-orm-mybatis</module>
+       <module>spring-boot-demo-orm-mybatis-mapper-page</module>
+       <module>spring-boot-demo-orm-mybatis-plus</module>
+       <module>spring-boot-demo-pagehelper</module>
+       <module>spring-boot-demo-properties</module>
+       <module>spring-boot-demo-quartz</module>
+       <module>spring-boot-demo-quartz-db</module>
+       <module>spring-boot-demo-ratelimit-guava</module>
+       <module>spring-boot-demo-ratelimit-redis</module>
+       <module>spring-boot-demo-rbac-security</module>
+       <module>spring-boot-demo-rbac-shiro</module>
+       <module>spring-boot-demo-rocketmq</module>
+       <module>spring-boot-demo-scheduling</module>
+       <module>spring-boot-demo-security</module>
+       <module>spring-boot-demo-session</module>
+       <module>spring-boot-demo-session-data-redis</module>
+       <module>spring-boot-demo-sharding-jdbc</module>
+       <module>spring-boot-demo-sharding-jdbc2</module>
+       <module>spring-boot-demo-shiro2</module>
+       <module>spring-boot-demo-shiro-ehcache</module>
+       <module>spring-boot-demo-shiro-ehcache-shiro</module>
+       <module>spring-boot-demo-social</module>
+       <module>spring-boot-demo-springsecurity-jwt-demo</module>
+       <module>spring-boot-demo-starter-test</module>
+       <module>spring-boot-demo-swagger</module>
+       <module>spring-boot-demo-swagger-beauty</module>
+       <module>spring-boot-demo-template-beetl</module>
+       <module>spring-boot-demo-template-enjoy</module>
+       <module>spring-boot-demo-template-freemarker</module>
+       <module>spring-boot-demo-template-thymeleaf</module>
+       <module>spring-boot-demo-thymeleaf-layout-demo</module>
+       <module>spring-boot-demo-tio</module>
+       <module>spring-boot-demo-uflo</module>
+       <module>spring-boot-demo-upload</module>
+       <module>spring-boot-demo-upload2</module>
+       <module>spring-boot-demo-ureport2</module>
+       <module>spring-boot-demo-urule</module>
+       <module>spring-boot-demo-validator</module>
+       <module>spring-boot-demo-web-restfulcrud</module>
+       <module>spring-boot-demo-websocket</module>
+       <module>spring-boot-demo-websocket2</module>
+       <module>spring-boot-demo-websocket-socketio</module>
+       <module>spring-boot-demo-websocket-study-master</module>
+       <module>spring-boot-demo-wechat-login</module>
+       <module>spring-boot-demo-zookeeper</module>-->
     </modules>
 
 
@@ -165,26 +132,26 @@
         <java.version>1.8</java.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <spring.boot.version>2.1.0.RELEASE</spring.boot.version>
+        <spring.boot.version>2.7.3</spring.boot.version>
         <mysql.version>8.0.12</mysql.version>
         <hutool.version>5.0.0</hutool.version>
         <guava.version>28.1-jre</guava.version>
         <user.agent.version>1.20</user.agent.version>
     </properties>
 
-    <repositories>
-        <repository>
-            <id>aliyun</id>
-            <name>aliyun</name>
-            <url>https://maven.aliyun.com/repository/public</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
+    <!--  <repositories>
+          <repository>
+              <id>aliyun</id>
+              <name>aliyun</name>
+              <url>https://maven.aliyun.com/repository/public</url>
+              <releases>
+                  <enabled>true</enabled>
+              </releases>
+              <snapshots>
+                  <enabled>false</enabled>
+              </snapshots>
+          </repository>
+      </repositories>-->
 
     <dependencyManagement>
         <dependencies>
@@ -195,11 +162,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <dependency>
-                <groupId>mysql</groupId>
-                <artifactId>mysql-connector-java</artifactId>
-                <version>${mysql.version}</version>
-            </dependency>
+
             <!-- hutool工具类 -->
             <dependency>
                 <groupId>cn.hutool</groupId>
@@ -218,6 +181,43 @@
                 <artifactId>UserAgentUtils</artifactId>
                 <version>${user.agent.version}</version>
             </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.13.2</version>
+                <scope>test</scope>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-test</artifactId>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <optional>true</optional>
+            </dependency>
+
+
         </dependencies>
     </dependencyManagement>
 

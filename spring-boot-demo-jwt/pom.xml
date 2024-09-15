@@ -2,12 +2,12 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.itstyle.jwt</groupId>
-  <artifactId>spring-boot-jwt</artifactId>
+  <artifactId>spring-boot-demo-jwt</artifactId>
   <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
   <name>spring-boot-jwt Maven Webapp</name>
   <url>http://maven.apache.org</url>
-  
+
   <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -53,37 +53,18 @@
 			<artifactId>jjwt</artifactId>
 			<version>0.7.0</version>
 		</dependency>
-		<!-- 构建Restful API -->  
-        <dependency>  
-            <groupId>io.springfox</groupId>  
-            <artifactId>springfox-swagger2</artifactId>  
-            <version>2.7.0</version>  
-        </dependency>  
-        <dependency>  
-            <groupId>io.springfox</groupId>  
-            <artifactId>springfox-swagger-ui</artifactId>  
-            <version>2.7.0</version>  
-        </dependency>  
+		<!-- 构建Restful API -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.7.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.7.0</version>
+        </dependency>
 	</dependencies>
-	<build>
-		<finalName>spring-boot-jwt</finalName>
-		<plugins>
-			<!-- 打包项目 mvn clean package -->
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-                    <maimClass>com.acts.jwt.Application</maimClass>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
-			</plugin>
-		</plugins>
-	</build>
+
 </project>
 
