@@ -1,0 +1,7 @@
+com\example\config\CaffeineConfig$Caches.class
+com\example\entity\Admin$AdminBuilder.class
+com\example\service\ICacheService.class
+com\example\CaffeineCacheApplication.class
+com\example\config\CaffeineConfig.class
+com\example\entity\Admin.class
+com\example\service\impl\CacheServiceImpl.class

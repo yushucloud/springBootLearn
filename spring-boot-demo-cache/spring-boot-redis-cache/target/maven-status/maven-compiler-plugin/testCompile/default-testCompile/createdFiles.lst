@@ -1,0 +1,5 @@
+com\example\BaseTest.class
+com\xkcoding\cache\redis\SpringBootDemoCacheRedisApplicationTests.class
+com\example\RedisTest.class
+com\example\service\UserServiceTest.class
+com\example\service\CacheTest.class
