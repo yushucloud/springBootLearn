@@ -1,0 +1,17 @@
+D:\space\gitee_github\springBootLearn\spring-boot-demo-websocket\spring-boot-demo-websocket2\src\main\java\com\baiyf\springbootwebsocket\config\ShiroConfig.java
+D:\space\gitee_github\springBootLearn\spring-boot-demo-websocket\spring-boot-demo-websocket2\src\main\java\com\baiyf\springbootwebsocket\bean\InfoBean.java
+D:\space\gitee_github\springBootLearn\spring-boot-demo-websocket\spring-boot-demo-websocket2\src\main\java\com\baiyf\springbootwebsocket\controller\LoginController.java
+D:\space\gitee_github\springBootLearn\spring-boot-demo-websocket\spring-boot-demo-websocket2\src\main\java\com\baiyf\springbootwebsocket\bean\ResponseBean.java
+D:\space\gitee_github\springBootLearn\spring-boot-demo-websocket\spring-boot-demo-websocket2\src\main\java\com\baiyf\springbootwebsocket\bean\MineBean.java
+D:\space\gitee_github\springBootLearn\spring-boot-demo-websocket\spring-boot-demo-websocket2\src\main\java\com\baiyf\springbootwebsocket\bean\FriendBean.java
+D:\space\gitee_github\springBootLearn\spring-boot-demo-websocket\spring-boot-demo-websocket2\src\main\java\com\baiyf\springbootwebsocket\bean\GroupBean.java
+D:\space\gitee_github\springBootLearn\spring-boot-demo-websocket\spring-boot-demo-websocket2\src\main\java\com\baiyf\springbootwebsocket\bean\ToBean.java
+D:\space\gitee_github\springBootLearn\spring-boot-demo-websocket\spring-boot-demo-websocket2\src\main\java\com\baiyf\springbootwebsocket\controller\ChatController.java
+D:\space\gitee_github\springBootLearn\spring-boot-demo-websocket\spring-boot-demo-websocket2\src\main\java\com\baiyf\springbootwebsocket\bean\ChatMessageBean.java
+D:\space\gitee_github\springBootLearn\spring-boot-demo-websocket\spring-boot-demo-websocket2\src\main\java\com\baiyf\springbootwebsocket\config\CustomRealm.java
+D:\space\gitee_github\springBootLearn\spring-boot-demo-websocket\spring-boot-demo-websocket2\src\main\java\com\baiyf\springbootwebsocket\SpringbootWebsocketApplication.java
+D:\space\gitee_github\springBootLearn\spring-boot-demo-websocket\spring-boot-demo-websocket2\src\main\java\com\baiyf\springbootwebsocket\bean\UserBean.java
+D:\space\gitee_github\springBootLearn\spring-boot-demo-websocket\spring-boot-demo-websocket2\src\main\java\com\baiyf\springbootwebsocket\bean\SendMessageBean.java
+D:\space\gitee_github\springBootLearn\spring-boot-demo-websocket\spring-boot-demo-websocket2\src\main\java\com\baiyf\springbootwebsocket\config\WebSocketConfig.java
+D:\space\gitee_github\springBootLearn\spring-boot-demo-websocket\spring-boot-demo-websocket2\src\main\java\com\baiyf\springbootwebsocket\bean\DataBean.java
+D:\space\gitee_github\springBootLearn\spring-boot-demo-websocket\spring-boot-demo-websocket2\src\main\java\com\baiyf\springbootwebsocket\listener\WebSocketEventListener.java

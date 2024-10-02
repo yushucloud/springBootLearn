@@ -1,0 +1,17 @@
+com\baiyf\springbootwebsocket\bean\DataBean.class
+com\baiyf\springbootwebsocket\controller\LoginController.class
+com\baiyf\springbootwebsocket\bean\SendMessageBean.class
+com\baiyf\springbootwebsocket\bean\MineBean.class
+com\baiyf\springbootwebsocket\bean\InfoBean.class
+com\baiyf\springbootwebsocket\bean\ChatMessageBean.class
+com\baiyf\springbootwebsocket\bean\GroupBean.class
+com\baiyf\springbootwebsocket\SpringbootWebsocketApplication.class
+com\baiyf\springbootwebsocket\bean\ResponseBean.class
+com\baiyf\springbootwebsocket\config\ShiroConfig.class
+com\baiyf\springbootwebsocket\controller\ChatController.class
+com\baiyf\springbootwebsocket\bean\ToBean.class
+com\baiyf\springbootwebsocket\config\WebSocketConfig.class
+com\baiyf\springbootwebsocket\config\CustomRealm.class
+com\baiyf\springbootwebsocket\bean\UserBean.class
+com\baiyf\springbootwebsocket\listener\WebSocketEventListener.class
+com\baiyf\springbootwebsocket\bean\FriendBean.class
