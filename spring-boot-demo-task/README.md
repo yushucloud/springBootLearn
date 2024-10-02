@@ -1,3 +1,66 @@
+# Spring Boot Scheduled
+
+在 Spring Boot 中，`@Scheduled` 注解可以用来设置定时任务，支持多种表达方式来定义规则。你可以通过使用固定频率、固定延迟或 Cron 表达式来控制任务的执行时间。下面是一些常见的使用方法：
+
+### 1. 固定频率执行任务
+使用 `fixedRate` 属性来定义任务执行的固定频率（单位为毫秒），任务会按固定时间间隔开始执行，无论上一个任务是否完成。
+
+```java
+@Scheduled(fixedRate = 5000)
+public void fixedRateTask() {
+    System.out.println("每5秒执行一次");
+}
+```
+
+### 2. 固定延迟执行任务
+使用 `fixedDelay` 属性来设置任务在上一个任务完成后经过固定延迟时间后再执行（单位为毫秒）。
+
+```java
+@Scheduled(fixedDelay = 5000)
+public void fixedDelayTask() {
+    System.out.println("上一个任务完成5秒后执行");
+}
+```
+
+### 3. 初始延迟后执行
+使用 `initialDelay` 和 `fixedRate` 或 `fixedDelay` 配合，设置任务在启动时先延迟一段时间再开始执行。
+
+```java
+@Scheduled(initialDelay = 10000, fixedRate = 5000)
+public void initialDelayTask() {
+    System.out.println("启动后10秒执行第一次任务，以后每5秒执行一次");
+}
+```
+
+### 4. 使用 Cron 表达式
+使用 `cron` 属性可以通过 Cron 表达式来精确控制任务的执行时间。Cron 表达式是由6到7个时间字段组成，用于定义秒、分、时、日、月、星期等。
+
+```java
+@Scheduled(cron = "0 0/1 * * * ?")
+public void cronTask() {
+    System.out.println("每分钟的整点执行一次");
+}
+```
+
+### Cron 表达式格式
+- 秒（0-59）
+- 分（0-59）
+- 时（0-23）
+- 日期（1-31）
+- 月份（1-12）
+- 星期（0-7，0 和 7 都表示星期日）
+  
+#### 例子：
+- `0 0 12 * * ?` ：每天中午12点执行。
+- `0 0/5 14 * * ?` ：每天14:00到14:55之间，每5分钟执行一次。
+- `0 0 12 1/2 * ?` ：每月的1号和15号中午12点执行。
+
+通过 `@Scheduled` 注解，你可以非常灵活地配置定时任务规则。需要注意的是，默认情况下，Spring Boot 中的定时任务是单线程执行的。如果需要并发执行多个任务，可以自定义线程池来处理。
+
+希望这些信息能帮助你更好地理解 Spring Boot 中的定时任务配置。
+
+
+
 # spring-boot-demo-task
 
 > 此 demo 主要演示了 Spring Boot 如何快速实现定时任务。
@@ -164,21 +227,9 @@ public class TaskJob {
 }
 ```
 
-## application.yml
 
-```yaml
-server:
-  port: 8080
-  servlet:
-    context-path: /demo
-# 下面的配置等同于 TaskConfig
-#spring:
-#  task:
-#    scheduling:
-#      pool:
-#        size: 20
-#      thread-name-prefix: Job-Thread-
-```
+
+
 
 ## 参考
 

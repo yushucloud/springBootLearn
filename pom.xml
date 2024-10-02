@@ -29,7 +29,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <spring.boot.version>2.7.3</spring.boot.version>
         <mysql.version>8.0.12</mysql.version>
-        <hutool.version>5.0.0</hutool.version>
+        <hutool.version>5.8.20</hutool.version>
         <guava.version>28.1-jre</guava.version>
         <user.agent.version>1.20</user.agent.version>
         <spring.boot.version>2.7.3</spring.boot.version>
@@ -40,13 +40,17 @@
         <module>spring-boot-demo-admin</module>
         <module>spring-boot-demo-amqp</module>
         <module>spring-boot-demo-amqp2</module>-->
-
-        <!--        <module>spring-boot-demo-dubbo</module>-->
-        <module>spring-boot-demo-async</module>
         <!--        <module>spring-boot-demo-config</module>-->
 
+        <!--        <module>spring-boot-demo-async</module>-->
+        <!--        <module>spring-boot-demo-data-mybatis</module>-->
         <!--        <module>spring-boot-demo-multi-threading</module>-->
+        <module>spring-boot-demo-data-mybatis-plus</module>
         <!--        <module>spring-boot-demo-task</module>-->
+
+        <!--        <module>spring-boot-demo-task</modulele>-->
+        <!--        <module>spring-boot-demo-dubbo</module>-->
+
         <!--        <module>spring-boot-demo-task-quartz</module>-->
         <!--        <module>spring-boot-demo-task-xxl-job</module>-->
         <!--<module>spring-boot-demo-cache</module>
@@ -186,7 +190,13 @@
                 <artifactId>spring-boot-starter-data-redis</artifactId>
                 <version>${spring.boot.version}</version>
             </dependency>
+            <!-- Spring Boot Starter for AOP -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-aop</artifactId>
+                <version>${spring.boot.version}</version>
 
+            </dependency>
             <!-- MySQL 依赖 -->
             <dependency>
                 <groupId>mysql</groupId>
@@ -205,11 +215,22 @@
              </dependency>-->
 
             <!-- hutool工具类 -->
+            <!-- <dependency>
+                 <groupId>cn.hutool</groupId>
+                 <artifactId>hutool-all</artifactId>
+                 <version>${hutool.version}</version>
+             </dependency>-->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>3.8.1</version>
+            </dependency>
             <dependency>
                 <groupId>cn.hutool</groupId>
                 <artifactId>hutool-all</artifactId>
-                <version>${hutool.version}</version>
+                <version>5.8.20</version> <!-- 版本可以根据实际需要选择 -->
             </dependency>
+
             <!-- guava工具类 -->
             <dependency>
                 <groupId>com.google.guava</groupId>
@@ -228,8 +249,6 @@
                 <version>4.13.2</version>
                 <scope>test</scope>
             </dependency>
-
-
 
 
             <dependency>
