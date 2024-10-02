@@ -118,9 +118,9 @@ public class UserServiceTest extends SpringBootDemoOrmMybatisPlusApplicationTest
     @Test
     public void testQueryByPageAndSort() {
         initData();
-        int count = userService.count(new QueryWrapper<>());
+        long count = userService.count(new QueryWrapper<>());
         Page<User> userPage = new Page<>(1, 5);
-        userPage.setDesc("id");
+//        userPage.setDesc("id");
         IPage<User> page = userService.page(userPage, new QueryWrapper<>());
         Assert.assertEquals(5, page.getSize());
         Assert.assertEquals(count, page.getTotal());
@@ -135,7 +135,7 @@ public class UserServiceTest extends SpringBootDemoOrmMybatisPlusApplicationTest
         initData();
         QueryWrapper<User> wrapper = new QueryWrapper<>();
         wrapper.like("name", "Save1").or().eq("phone_number", "17300000001").orderByDesc("id");
-        int count = userService.count(wrapper);
+        long count = userService.count(wrapper);
         Page<User> userPage = new Page<>(1, 3);
         IPage<User> page = userService.page(userPage, wrapper);
         Assert.assertEquals(3, page.getSize());
