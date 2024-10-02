@@ -47,6 +47,7 @@
         <!--        <module>spring-boot-demo-multi-threading</module>-->
         <module>spring-boot-demo-data-mybatis-plus</module>
         <module>spring-boot-demo-data-mybatis-plus-dynamic-datasource-demo</module>
+        <module>spring-boot-demo-data-mybatis-plus-dynamic-datasource</module>
         <!--        <module>spring-boot-demo-task</module>-->
 
         <!--        <module>spring-boot-demo-task</modulele>-->
