@@ -7,6 +7,13 @@
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/spring-boot-demo-mq/spring-boot-demo-rocketmq01/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-demo-websocket/spring-boot-demo-websocket2/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-demo-websocket/spring-boot-demo-websocket4/pom.xml" />
+      </set>
+    </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
 </project>

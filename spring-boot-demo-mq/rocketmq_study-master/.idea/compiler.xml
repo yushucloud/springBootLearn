@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="b_rocketmq_boot_producer" />
+        <module name="seckill_service" />
+        <module name="c_rocketmq_boot_consumer" />
+        <module name="seckill_web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="a_rocketmq_demo" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="a_rocketmq_demo" options="-parameters" />
+      <module name="b_rocketmq_boot_producer" options="-parameters" />
+      <module name="c_rocketmq_boot_consumer" options="-parameters" />
+      <module name="demo" options="" />
+      <module name="seckill_service" options="-parameters" />
+      <module name="seckill_web" options="-parameters" />
+    </option>
+  </component>
+</project>

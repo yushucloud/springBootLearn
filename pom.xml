@@ -39,7 +39,7 @@
 
         <!--        <module>spring-boot-demo-websocket</module>-->
 <!--        <module>spring-boot-demo-mq</module>-->
-
+        <module>spring-boot-demo-websocket</module>
         <!--<module>spring-boot-demo-actuator</module>
         <module>spring-boot-demo-admin</module>
         <module>spring-boot-demo-amqp</module>
@@ -145,7 +145,7 @@
        <module>spring-boot-demo-ureport2</module>
        <module>spring-boot-demo-urule</module>
        <module>spring-boot-demo-validator</module>
-       <module>spring-boot-demo-websocket2</module>
+
        <module>spring-boot-demo-websocket-socketio</module>
        <module>spring-boot-demo-websocket-study-master</module>
        <module>spring-boot-demo-wechat-login</module>

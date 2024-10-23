@@ -1,0 +1,36 @@
+server:
+  port: 7002
+spring:
+  application:
+    name: seckill-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/dljd_seckill?serverTimezone=GMT%2B8
+#    url: jdbc:mysql://localhost:3306/dljd_seckill?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+  redis:
+    host: 192.168.111.128
+    port: 6379
+    database: 0
+    lettuce:
+      pool:
+        enabled: true
+        max-active: 100
+        max-idle: 20
+        min-idle: 5
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # mybatis日志
+  mapper-locations: classpath*:com/bart/provider/dao/mapper/*.xml
+rocketmq:
+  name-server: 192.168.111.128:9876
+  producer:
+    group: seckill-group        # 生产者组别
+    send-message-timeout: 3000  # 消息发送的超时时间
+    retry-times-when-send-async-failed: 2  # 异步消息发送失败重试次数
+    max-message-size: 4194304       # 消息的最大长度
+
+
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue 2 WebSocket 示例</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client/dist/sockjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/stompjs/lib/stomp.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <h1>消息:</h1>
+    <ul>
+        <li v-for="msg in messages" :key="msg">{{ msg }}</li>
+    </ul>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            messages: []
+        },
+        mounted() {
+            this.connect();
+        },
+        methods: {
+            connect() {
+                const socket = new SockJS('http://localhost:8080/demo/ws'); // 根据实际情况修改
+                const stompClient = Stomp.over(socket);
+                stompClient.connect({}, (frame) => {
+                    console.log('Connected: ' + frame);
+                    stompClient.subscribe('/topic/messages', (message) => {
+                        this.messages.push(message.body);
+                    });
+                });
+            }
+        }
+    });
+</script>
+</body>
+</html>

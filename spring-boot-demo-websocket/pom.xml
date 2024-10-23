@@ -16,9 +16,9 @@
     <packaging>pom</packaging>
     <modules>
         <module>spring-boot-demo-websocket1</module>
-        <module>spring-boot-demo-websocket2</module>
+<!--        <module>spring-boot-demo-websocket2</module>-->
         <module>spring-boot-demo-websocket3</module>
-        <module>spring-boot-demo-websocket4</module>
+<!--        <module>spring-boot-demo-websocket4</module>-->
     </modules>
 
     <properties>

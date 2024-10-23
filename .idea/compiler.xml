@@ -2,10 +2,13 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="spring-boot-demo-websocket1" />
+        <module name="spring-boot-demo-websocket3" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -16,6 +19,8 @@
       <module name="spring-boot-demo-mq" target="1.8" />
       <module name="spring-boot-demo-rocketmq01" target="1.8" />
       <module name="spring-boot-demo-rocketmq02" target="1.8" />
+      <module name="spring-boot-demo-websocket2" target="1.8" />
+      <module name="spring-boot-demo-websocket4" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -25,6 +30,10 @@
       <module name="rocketmq-producer" options="-parameters" />
       <module name="rocketmq-producer-simple" options="-parameters" />
       <module name="spring-boot-demo-rocketmq01" options="-parameters" />
+      <module name="spring-boot-demo-websocket1" options="-parameters" />
+      <module name="spring-boot-demo-websocket2" options="-parameters" />
+      <module name="spring-boot-demo-websocket3" options="-parameters" />
+      <module name="spring-boot-demo-websocket4" options="-parameters" />
     </option>
   </component>
 </project>
