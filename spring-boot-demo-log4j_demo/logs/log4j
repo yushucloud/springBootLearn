@@ -1,0 +1,4 @@
+[FATAL     ]0  com.itheima.Test.main(Test.java:18) 2022-09-26 16:48:25.292 fatal
+[ERROR     ]4  com.itheima.Test.main(Test.java:20) 2022-09-26 16:48:25.296 error
+[FATAL     ]4  com.itheima.Test.main(Test.java:18) 2022-09-26 16:48:25.296 fatal
+[ERROR     ]4  com.itheima.Test.main(Test.java:20) 2022-09-26 16:48:25.296 error

@@ -1,0 +1,68 @@
+# shardingjdbc分片策略
+# 配置数据源，给数据源起名称
+#  actual-data-nodes
+#  配置分表信息，这边用的inline表达式，翻译过来就是master.user_0,master.user_1,master.user_2,master.user_3
+#  inline.sharding-column
+#  分表的字段，这边用id分表
+#  inline.algorithm-expression
+#  分表算法行表达式，需符合groovy语法，上面的配置就是用id进行取模分片
+
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  shardingsphere:
+    datasource:
+#      names: m1,m2,m3,m4
+      names: m1
+      m1:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/a_course_db_1?serverTimezone=GMT%2B8
+        username: root
+        password: 123456
+      m2:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/a_course_db_2?serverTimezone=GMT%2B8
+        username: root
+        password: 123456
+      m3:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/a_course_db_3?serverTimezone=GMT%2B8
+        username: root
+        password: 123456
+      m4:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/a_course_db_4?serverTimezone=GMT%2B8
+        username: root
+        password: 123456
+    sharding:
+      tables:
+        course:
+          actual-data-nodes: m${1}.course_${1..7}
+          key-generator:
+            column: cid
+            type: SNOWFLAKE
+          table-strategy:
+            inline:
+#              设置主键 ，分表的字段
+              sharding-column: cid
+#              主键生成策略
+              algorithm-expression: course_${cid.longValue() % 7+1}
+# spring.shardingsphere.sharding.tables.user.table-strategy.inline.algorithm-expression=user_${id.longValue() % 4}
+    props:
+      sql:
+        show:
+          false
+logging:
+  level:
+    com:
+      atguigu:
+        shardingjdbcdemo:
+          mapper:
+            debug
+
+

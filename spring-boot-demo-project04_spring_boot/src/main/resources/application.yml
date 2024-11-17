@@ -1,0 +1,32 @@
+server:
+  port: 8080
+#person:
+#  listName: 张三
+#  age: 18
+#  boss: false
+#  maps: { k1: v1,k12: v2 }
+#  lists:
+#    - lisi
+#    - wangWu
+#  dog:
+#    name: 小狗
+person:
+  age: 24
+  lists:
+    - a
+    - b
+    - c
+  maps:
+    a: b
+    c: d
+    e: f
+  boss: false
+  dog:
+    name: 旺旺
+logging:
+  level:
+    com:
+      yushu: error
+  file:
+    name: springboot.log
+

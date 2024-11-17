@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.geshanzsq</groupId>
+    <artifactId>geshanzsq-nav</artifactId>
+    <packaging>pom</packaging>
+    <version>2.0.0</version>
+    <description>格姗导航</description>
+    <modules>
+        <module>geshanzsq-nav-admin</module>
+        <module>geshanzsq-nav-common</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+        <maven.compiler.plugin.version>3.10.1</maven.compiler.plugin.version>
+
+        <geshanzsq.nav.common.core.version>2.0.0</geshanzsq.nav.common.core.version>
+        <geshanzsq.nav.common.rate.limiter.version>2.0.0</geshanzsq.nav.common.rate.limiter.version>
+        <geshanzsq.nav.common.redis.version>2.0.0</geshanzsq.nav.common.redis.version>
+        <geshanzsq.nav.common.swagger.version>2.0.0</geshanzsq.nav.common.swagger.version>
+        <geshanzsq.nav.common.log.version>2.0.0</geshanzsq.nav.common.log.version>
+        <geshanzsq.nav.common.security.version>2.0.0</geshanzsq.nav.common.security.version>
+        <geshanzsq.nav.common.framework.version>2.0.0</geshanzsq.nav.common.framework.version>
+        <geshanzsq.nav.admin.system.version>2.0.0</geshanzsq.nav.admin.system.version>
+
+        <spring.boot.version>2.3.12.RELEASE</spring.boot.version>
+        <knife4j.version>3.0.3</knife4j.version>
+        <mybatis.plus.version>3.5.2</mybatis.plus.version>
+        <fastjson.version>1.2.79</fastjson.version>
+        <mapstruct.version>1.5.0.RC1</mapstruct.version>
+        <lombok.version>1.18.22</lombok.version>
+        <pagehelper.version>1.4.1</pagehelper.version>
+        <easy.captcha.version>1.6.2</easy.captcha.version>
+        <commons.pool2.version>2.11.1</commons.pool2.version>
+        <bitwalker.version>1.21</bitwalker.version>
+        <hutool.all.version>5.8.5</hutool.all.version>
+        <commons.io.version>2.11.0</commons.io.version>
+        <flexmark.version>0.62.2</flexmark.version>
+        <just.auth.version>1.16.5</just.auth.version>
+        <jasypt.version>3.0.4</jasypt.version>
+        <jsoup.version>1.15.3</jsoup.version>
+        <httpcore.version>4.4.15</httpcore.version>
+        <commons.fileupload.version>1.4</commons.fileupload.version>
+        <just.auth.version>1.16.5</just.auth.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- 通用核心模块 -->
+            <dependency>
+                <groupId>com.geshanzsq</groupId>
+                <artifactId>geshanzsq-nav-common-core</artifactId>
+                <version>${geshanzsq.nav.common.core.version}</version>
+            </dependency>
+
+            <!-- 通用限流模块 -->
+            <dependency>
+                <groupId>com.geshanzsq</groupId>
+                <artifactId>geshanzsq-nav-common-rate-limiter</artifactId>
+                <version>${geshanzsq.nav.common.rate.limiter.version}</version>
+            </dependency>
+
+            <!-- 通用缓存模块 -->
+            <dependency>
+                <groupId>com.geshanzsq</groupId>
+                <artifactId>geshanzsq-nav-common-redis</artifactId>
+                <version>${geshanzsq.nav.common.redis.version}</version>
+            </dependency>
+
+            <!-- 日志模块 -->
+            <dependency>
+                <groupId>com.geshanzsq</groupId>
+                <artifactId>geshanzsq-nav-common-log</artifactId>
+                <version>${geshanzsq.nav.common.log.version}</version>
+            </dependency>
+
+            <!-- 安全认证模块 -->
+            <dependency>
+                <groupId>com.geshanzsq</groupId>
+                <artifactId>geshanzsq-nav-common-security</artifactId>
+                <version>${geshanzsq.nav.common.security.version}</version>
+            </dependency>
+
+            <!-- 通用接口文档模块 -->
+            <dependency>
+                <groupId>com.geshanzsq</groupId>
+                <artifactId>geshanzsq-nav-common-swagger</artifactId>
+                <version>${geshanzsq.nav.common.swagger.version}</version>
+            </dependency>
+
+            <!-- 通用框架模块 -->
+            <dependency>
+                <groupId>com.geshanzsq</groupId>
+                <artifactId>geshanzsq-nav-common-framework</artifactId>
+                <version>${geshanzsq.nav.common.framework.version}</version>
+            </dependency>
+
+            <!-- 系统模块 -->
+            <dependency>
+                <groupId>com.geshanzsq</groupId>
+                <artifactId>geshanzsq-nav-admin-system</artifactId>
+                <version>${geshanzsq.nav.admin.system.version}</version>
+            </dependency>
+
+            <!-- spring boot-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- knife4j 接口文档 -->
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
+            </dependency>
+
+            <!-- MyBatis Plus -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis.plus.version}</version>
+            </dependency>
+
+            <!-- 阿里 JSO N解析器 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+            <!-- MapStruct 对象转换 -->
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct</artifactId>
+                <version>${mapstruct.version}</version>
+            </dependency>
+
+            <!-- PageHelper 分页插件 -->
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>${pagehelper.version}</version>
+            </dependency>
+
+            <!-- easy-captcha 验证码 -->
+            <dependency>
+                <groupId>com.github.whvcse</groupId>
+                <artifactId>easy-captcha</artifactId>
+                <version>${easy.captcha.version}</version>
+            </dependency>
+
+            <!-- 使用 Redis 缓存需要引用 -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-pool2</artifactId>
+                <version>${commons.pool2.version}</version>
+            </dependency>
+
+            <!-- 解析客户端操作系统、浏览器等 -->
+            <dependency>
+                <groupId>eu.bitwalker</groupId>
+                <artifactId>UserAgentUtils</artifactId>
+                <version>${bitwalker.version}</version>
+            </dependency>
+
+            <!-- aop 切面 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-aop</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
+
+            <!-- huTool 工具 -->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.all.version}</version>
+            </dependency>
+
+            <!-- io 常用工具类 -->
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons.io.version}</version>
+            </dependency>
+
+            <!-- Markdown 转 Html -->
+            <dependency>
+                <groupId>com.vladsch.flexmark</groupId>
+                <artifactId>flexmark-all</artifactId>
+                <version>${flexmark.version}</version>
+            </dependency>
+            <!--表格渲染插件-->
+            <dependency>
+                <groupId>com.vladsch.flexmark</groupId>
+                <artifactId>flexmark-ext-tables</artifactId>
+                <version>${flexmark.version}</version>
+            </dependency>
+
+            <!-- JustAuth 第三方登录模块-->
+            <dependency>
+                <groupId>me.zhyd.oauth</groupId>
+                <artifactId>JustAuth</artifactId>
+                <version>${just.auth.version}</version>
+            </dependency>
+
+            <!-- 数据库密码加密 -->
+            <dependency>
+                <groupId>com.github.ulisesbocchio</groupId>
+                <artifactId>jasypt-spring-boot-starter</artifactId>
+                <version>${jasypt.version}</version>
+            </dependency>
+
+            <!-- html 解析 -->
+            <dependency>
+                <groupId>org.jsoup</groupId>
+                <artifactId>jsoup</artifactId>
+                <version>${jsoup.version}</version>
+            </dependency>
+
+            <!-- http core -->
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpcore</artifactId>
+                <version>${httpcore.version}</version>
+            </dependency>
+
+            <!--文件上传工具类 -->
+            <dependency>
+                <groupId>commons-fileupload</groupId>
+                <artifactId>commons-fileupload</artifactId>
+                <version>${commons.fileupload.version}</version>
+            </dependency>
+
+            <!-- JustAuth 第三方登录模块-->
+            <dependency>
+                <groupId>me.zhyd.oauth</groupId>
+                <artifactId>JustAuth</artifactId>
+                <version>${just.auth.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.plugin.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                    <!-- 解决 Lombok + MapStruct 组合 -->
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>${lombok.version}</version>
+                        </path>
+                        <path>
+                            <groupId>org.mapstruct</groupId>
+                            <artifactId>mapstruct-processor</artifactId>
+                            <version>${mapstruct.version}</version>
+                        </path>
+                    </annotationProcessorPaths>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>public</id>
+            <name>aliyun nexus</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>public</id>
+            <name>aliyun nexus</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
+
+</project>
