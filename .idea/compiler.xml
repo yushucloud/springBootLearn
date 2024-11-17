@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="spring-boot-demo-websocket" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -30,6 +31,7 @@
       <module name="rocketmq-producer" options="-parameters" />
       <module name="rocketmq-producer-simple" options="-parameters" />
       <module name="spring-boot-demo-rocketmq01" options="-parameters" />
+      <module name="spring-boot-demo-websocket" options="-parameters" />
       <module name="spring-boot-demo-websocket1" options="-parameters" />
       <module name="spring-boot-demo-websocket2" options="-parameters" />
       <module name="spring-boot-demo-websocket3" options="-parameters" />
