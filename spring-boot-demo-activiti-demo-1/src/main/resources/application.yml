@@ -1,0 +1,13 @@
+spring:
+  activiti:
+    # 自动建表
+    database-schema-update: true
+    history-level: full
+    db-history-used: true
+    copy-variables-to-local-for-tasks: false
+  datasource:
+    url: jdbc:mysql://localhost:3306/activiti?useUnicode=true&characterEncoding=utf8&nullCatalogMeansCurrent=true
+    username: root
+    password: 123456
+    driverClassName: com.mysql.cj.jdbc.Driver
+
